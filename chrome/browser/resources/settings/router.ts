@@ -101,6 +101,7 @@ export interface SettingsRoutes {
   SYNC_ADVANCED: Route;
   SYSTEM: Route;
   TRIGGERED_RESET_DIALOG: Route;
+  GET_STARTED: Route; SHIELDS: Route; SOCIAL_BLOCKING: Route; REWARDS: Route; EXTENSIONS: Route; EXTENSIONS_V2: Route; BRAVE_SYNC: Route; BRAVE_SYNC_SETUP: Route; BRAVE_IPFS: Route; BRAVE_WALLET: Route; BRAVE_WEB3: Route; BRAVE_HELP_TIPS: Route; BRAVE_NEW_TAB: Route; THEMES: Route; BRAVE_SITE_SETTINGS_COOKIES_DETAILS: Route;
 }
 
 /** Class for navigable routes. */

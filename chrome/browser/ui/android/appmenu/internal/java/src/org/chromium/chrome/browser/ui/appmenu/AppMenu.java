@@ -219,6 +219,7 @@ class AppMenu implements OnItemClickListener, OnKeyListener, AppMenuClickHandler
             mPopup.setAnimationStyle(
                     isMenuIconAtStart ? R.style.StartIconMenuAnim : R.style.EndIconMenuAnim);
         }
+        if (!isByPermanentButton) mPopup.setAnimationStyle(BraveAppMenu.getAnimationStyle());
 
         // Turn off window animations for low end devices.
         if (SysUtils.isLowEndDevice()) mPopup.setAnimationStyle(0);
@@ -295,6 +296,7 @@ class AppMenu implements OnItemClickListener, OnKeyListener, AppMenuClickHandler
                 popupHeight, anchorView.getRootView().getLayoutDirection());
         mPopup.setContentView(contentView);
 
+        if (BraveAppMenu.isMenuFromBottom()) popupHeight = visibleDisplayFrame.height() - anchorViewOffset - popupPosition[1];
         if (popupHeight + popupPosition[1] > visibleDisplayFrame.height() - anchorViewOffset) {
             mPopup.setHeight(visibleDisplayFrame.height() - anchorViewOffset);
         }

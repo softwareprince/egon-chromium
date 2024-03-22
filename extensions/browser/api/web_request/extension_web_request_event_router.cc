@@ -1168,6 +1168,7 @@ ExtensionWebRequestEventRouter::OnAuthRequired(
     const net::AuthChallengeInfo& auth_info,
     AuthCallback callback,
     net::AuthCredentials* credentials) {
+  BRAVE_EXTENSION_WEB_REQUEST_EVENT_ROUTER_ON_AUTH_REQUIRED
   // No browser_context means that this is for authentication challenges in the
   // system context. Skip in that case. Also skip sensitive requests.
   if (!browser_context ||

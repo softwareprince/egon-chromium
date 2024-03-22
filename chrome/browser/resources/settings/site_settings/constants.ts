@@ -53,6 +53,7 @@ export enum ContentSettingsTypes {
   // are used everywhere where ContentSettingsTypes is used in JS.
   PDF_DOCUMENTS = 'pdfDocuments',
   SITE_DATA = 'site-data',
+  AUTOPLAY = 'autoplay', ETHEREUM = 'ethereum', SOLANA = 'solana', BRAVE_SHIELDS = 'braveShields', GOOGLE_SIGN_IN = 'googleSignIn', LOCALHOST_ACCESS = 'localhostAccess',
 }
 
 /**

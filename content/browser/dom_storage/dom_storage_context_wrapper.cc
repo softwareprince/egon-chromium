@@ -309,6 +309,7 @@ bool DOMStorageContextWrapper::IsRequestValid(
         break;
       }
     }
+    BRAVE_DOM_STORAGE_CONTEXT_WRAPPER_IS_REQUEST_VALID
   }
   if (!security_policy_handle.CanAccessDataForOrigin(storage_key.origin())) {
     const std::string type_string =

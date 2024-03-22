@@ -385,6 +385,7 @@ class BookmarkModel final : public BookmarkUndoProvider,
   // this is a no-op. Deletion is done asynchronously on a background thread.
   static void WipeAccountStorageForRollback(const base::FilePath& profile_path);
 
+  BRAVE_BOOKMARK_MODEL_H
  private:
   friend class BookmarkCodecTest;
   friend class BookmarkModelFaviconTest;

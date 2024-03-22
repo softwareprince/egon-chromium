@@ -292,5 +292,6 @@ def main(argv):
     _update_dep_file(args.input, args, dep_file_header, manifest)
 
 
+from import_inline import inline_file_from_src; inline_file_from_src("brave/chromium_src/ui/webui/resources/tools/bundle_js.py", globals(), locals())
 if __name__ == '__main__':
   main(sys.argv[1:])

@@ -16,6 +16,7 @@ group("sync") {
   if (is_chromeos) {
     public_deps += [ "//components/sync/chromeos" ]
   }
+  import("//brave/build/config/brave_build.gni") public_deps += brave_components_sync_deps
 }
 
 static_library("test_support") {

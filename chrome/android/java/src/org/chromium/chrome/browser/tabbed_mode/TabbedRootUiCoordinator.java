@@ -702,7 +702,7 @@ public class TabbedRootUiCoordinator extends RootUiCoordinator {
             NotificationPermissionController.attach(
                     mWindowAndroid, mNotificationPermissionController);
 
-            didTriggerPromo = mNotificationPermissionController.requestPermissionIfNeeded(
+            if(false) didTriggerPromo = mNotificationPermissionController.requestPermissionIfNeeded(
                     false /* contextual */);
         }
 

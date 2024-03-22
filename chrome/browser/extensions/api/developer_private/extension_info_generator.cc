@@ -643,6 +643,7 @@ void ExtensionInfoGenerator::CreateExtensionInfoHelper(
   info->incognito_access.is_enabled = util::CanBeIncognitoEnabled(&extension);
   info->incognito_access.is_active =
       util::IsIncognitoEnabled(extension.id(), browser_context_);
+  BRAVE_CREATE_EXTENSION_INFO_HELPER
 
   // Safety check warning acknowledge status.
   extension_prefs_->ReadPrefAsBoolean(

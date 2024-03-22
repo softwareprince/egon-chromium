@@ -299,6 +299,7 @@ void RegisterLocalStatePrefs(PrefRegistrySimple* registry) {
       prefs::kIosSafetyCheckManagerSafeBrowsingCheckResult,
       NameForSafetyCheckState(SafeBrowsingSafetyCheckState::kDefault),
       PrefRegistry::LOSSY_PREF);
+  BRAVE_REGISTER_LOCAL_STATE_PREFS
 }
 
 void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
@@ -479,6 +480,7 @@ void RegisterBrowserStatePrefs(user_prefs::PrefRegistrySyncable* registry) {
   // Register pref used to detect addresses in web page
   registry->RegisterBooleanPref(prefs::kDetectAddressesEnabled, true);
   registry->RegisterBooleanPref(prefs::kDetectAddressesAccepted, false);
+  BRAVE_REGISTER_BROWSER_STATE_PREFS
 }
 
 // This method should be periodically pruned of year+ old migrations.
@@ -567,4 +569,5 @@ void MigrateObsoleteBrowserStatePrefs(PrefService* prefs) {
   invalidation::InvalidatorRegistrarWithMemory::ClearDeprecatedPrefs(prefs);
   invalidation::PerUserTopicSubscriptionManager::ClearDeprecatedPrefs(prefs);
   invalidation::FCMInvalidationService::ClearDeprecatedPrefs(prefs);
+  BRAVE_MIGRATE_OBSOLETE_BROWSER_STATE_PREFS
 }

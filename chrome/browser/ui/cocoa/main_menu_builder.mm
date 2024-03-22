@@ -109,6 +109,7 @@ NSMenuItem* BuildFileMenu(NSApplication* nsapp,
                 Item(IDS_NEW_INCOGNITO_WINDOW_MAC)
                     .command_id(IDC_NEW_INCOGNITO_WINDOW)
                     .remove_if(is_pwa),
+                BRAVE_BUILD_FILE_MENU
                 Item(IDS_REOPEN_CLOSED_TABS_MAC)
                     .command_id(IDC_RESTORE_TAB)
                     .remove_if(is_pwa),
@@ -479,6 +480,7 @@ NSMenuItem* BuildHelpMenu(NSApplication* nsapp,
 #if BUILDFLAG(GOOGLE_CHROME_BRANDING)
             Item(IDS_FEEDBACK_MAC).command_id(IDC_FEEDBACK),
 #endif
+                BRAVE_BUILD_HELP_MENU
                 Item(IDS_HELP_MAC)
                     .string_format_1(product_name)
                     .command_id(IDC_HELP_PAGE_VIA_MENU),

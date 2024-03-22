@@ -2173,6 +2173,7 @@ FormRetrievalResult LoginDatabase::StatementToForms(
 
     EncryptionResult result = InitPasswordFormFromStatement(
         *statement, /*decrypt_and_fill_password_value=*/true, new_form.get());
+    BRAVE_STATEMENT_TO_FORMS
     if (result == ENCRYPTION_RESULT_SERVICE_FAILURE) {
       has_service_failure = true;
       continue;

@@ -236,7 +236,7 @@ FuzzyFinder::~FuzzyFinder() = default;
 double FuzzyFinder::Find(const std::u16string& haystack,
                          std::vector<gfx::Range>* matched_ranges) {
   matched_ranges->clear();
-  if (needle_.size() == 0)
+  if (needle_.size() == 0 BRAVE_FUZZY_FINDER_NEEDLE_SIZE_CHECK)
     return 0;
   const std::u16string& folded = base::i18n::FoldCase(haystack);
   size_t m = needle_.size();

@@ -191,6 +191,7 @@ class CORE_EXPORT DOMWindow : public EventTarget {
 
   void DisconnectFromFrame() { frame_ = nullptr; }
 
+  BRAVE_DOM_WINDOW_H
  private:
   void DoPostMessage(scoped_refptr<SerializedScriptValue> message,
                      const MessagePortArray&,

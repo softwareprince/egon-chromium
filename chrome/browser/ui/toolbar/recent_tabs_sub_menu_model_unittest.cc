@@ -612,6 +612,7 @@ TEST_F(RecentTabsSubMenuModelTest, MaxTabsPerSessionAndRecency) {
       {ui::MenuModel::TYPE_COMMAND, true},    // <tab>
       // max tabs per sessions is 4, so only the 4 most tabs will show,
       // independent of which window they came from.
+      BRAVE_MAX_TABS_PER_SESSION_AND_RECENCY
   };
   VerifyModel(model, kData);
 

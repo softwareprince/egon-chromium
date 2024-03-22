@@ -8105,6 +8105,8 @@ void RenderFrameHostImpl::CreateNewWindow(
         dom_storage_context, params->session_storage_namespace_id);
   }
 
+  params->no_javascript_access = no_javascript_access;
+
   if (IsCredentialless() || IsNestedWithinFencedFrame() ||
       CoopSuppressOpener(/*opener=*/this)) {
     params->opener_suppressed = true;

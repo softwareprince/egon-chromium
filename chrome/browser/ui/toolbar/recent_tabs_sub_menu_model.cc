@@ -472,6 +472,7 @@ void RecentTabsSubMenuModel::BuildTabsFromOtherDevices() {
            ++k) {
         BuildOtherDevicesTabItem(this, session_tag, *tabs_in_session[k]);
       }  // for all tabs in one session
+      BRAVE_BUILD_TABS_FROM_OTHER_DEVICES
     }
     ++num_sessions_added;
   }  // for all sessions

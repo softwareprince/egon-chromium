@@ -120,6 +120,7 @@ constexpr auto kHistogramValue = base::MakeFixedFlatMap<ContentSettingsType,
 
     // As mentioned at the top, please don't forget to update ContentType in
     // enums.xml when you add entries here!
+    BRAVE_HISTOGRAM_VALUE_LIST
 });
 
 constexpr int kkHistogramValueMax = std::max_element(

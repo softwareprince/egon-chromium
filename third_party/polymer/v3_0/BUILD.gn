@@ -47,6 +47,7 @@ js_files = [
 ]
 
 if (is_chromeos_ash) {
+} if (!is_android) {
   js_files += [
     "iron-dropdown/iron-dropdown.js",
     "iron-dropdown/iron-dropdown-scroll-manager.js",
@@ -179,6 +180,7 @@ ts_library("library") {
   ]
 
   if (is_chromeos_ash) {
+  } if (!is_android) {
     definitions += [
       "components-chromium/iron-dropdown/iron-dropdown.d.ts",
       "components-chromium/iron-dropdown/iron-dropdown-scroll-manager.d.ts",

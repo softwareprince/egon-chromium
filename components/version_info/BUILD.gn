@@ -27,6 +27,7 @@ static_library("version_info") {
     ":channel",
     ":generate_version_info",
   ]
+  configs += [ "//brave/build:version" ] deps += [ "//brave/components/version_info" ]
 }
 
 # Isolate the //ui/base dependency in this target.

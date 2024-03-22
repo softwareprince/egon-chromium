@@ -199,6 +199,7 @@ const ContentSettingsTypeNameEntry kContentSettingsTypeGroupNames[] = {
     {ContentSettingsType::ALL_SCREEN_CAPTURE, nullptr},
     {ContentSettingsType::COOKIE_CONTROLS_METADATA, nullptr},
     {ContentSettingsType::TPCD_SUPPORT, nullptr},
+    BRAVE_CONTENT_SETTINGS_TYPE_GROUP_NAMES_LIST
 };
 
 static_assert(std::size(kContentSettingsTypeGroupNames) ==
@@ -491,6 +492,7 @@ bool HasRegisteredGroupName(ContentSettingsType type) {
 }
 
 ContentSettingsType ContentSettingsTypeFromGroupName(base::StringPiece name) {
+  BRAVE_SITE_SETTINGS_HELPER_CONTENT_SETTINGS_TYPE_FROM_GROUP_NAME
   for (const auto& entry : kContentSettingsTypeGroupNames) {
     // Content setting types that aren't represented in the settings UI
     // will have `nullptr` as their `name`. However, converting `nullptr`

@@ -85,6 +85,7 @@ android_resources("java_resources") {
     "java/res/values/ids.xml",
     "java/res/values/styles.xml",
   ]
+  sources += brave_android_features_java_resources
   deps = [
     ":java_strings_grd",
     "//chrome/android:chrome_app_java_resources",

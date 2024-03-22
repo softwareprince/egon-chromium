@@ -1120,6 +1120,7 @@ void BookmarkBarView::Layout() {
       x = next_x;
     }
   }
+  BRAVE_LAYOUT
 
   // Set the visibility of the tab group separator if there are groups and
   // bookmarks.

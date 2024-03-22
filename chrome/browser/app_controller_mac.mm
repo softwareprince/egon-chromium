@@ -644,7 +644,7 @@ class AppControllerNativeThemeObserver : public ui::NativeThemeObserver {
 
 + (AppController*)sharedController {
   static AppController* sharedController = [] {
-    AppController* sharedController = [[AppController alloc] init];
+    AppController* sharedController = [[BraveAppController alloc] init];
     NSApp.delegate = sharedController;
     return sharedController;
   }();
@@ -1183,7 +1183,7 @@ class AppControllerNativeThemeObserver : public ui::NativeThemeObserver {
   }
 
   auto it = _profileBookmarkMenuBridgeMap.find(profilePath);
-  if (it != _profileBookmarkMenuBridgeMap.end() &&
+  if (it != _profileBookmarkMenuBridgeMap.end() && !isOffTheRecord &&
       (!base::FeatureList::IsEnabled(features::kDestroyProfileOnBrowserClose) ||
        (it->second->GetProfile() && !isOffTheRecord))) {
     // Clean up the dangling Profile* in |_profileBookmarkMenuBridgeMap|.

@@ -95,6 +95,7 @@ class ChromeBrowsingDataRemoverDelegate
   void OverrideDomainReliabilityClearerForTesting(
       DomainReliabilityClearer clearer);
 
+  BRAVE_CHROME_BROWSING_DATA_REMOVER_DELEGATE_H
  private:
   using WebRtcEventLogManager = webrtc_event_logging::WebRtcEventLogManager;
 
@@ -149,11 +150,12 @@ class ChromeBrowsingDataRemoverDelegate
     kWebAuthnCredentials = 43,
     kWebrtcVideoPerfHistory = 44,
     kMediaDeviceSalts = 45,
+    kIPFSCache = 46,
 
     // Please update ChromeBrowsingDataRemoverTasks in enums.xml and
     // History.ClearBrowsingData.Duration.ChromeTask.{Task}
     // in histograms/metadata/history/histograms.xml when adding entries!
-    kMaxValue = kMediaDeviceSalts,
+    kMaxValue = kIPFSCache,
   };
 
   // Returns the suffix for the

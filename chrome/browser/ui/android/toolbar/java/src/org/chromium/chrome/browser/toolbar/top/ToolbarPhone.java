@@ -397,6 +397,7 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
         if (mOptionalButtonCoordinator != null) {
             mOptionalButtonCoordinator.setBackgroundColorFilter(color);
         }
+        BraveToolbarLayout.class.cast(this).updateModernLocationBarColorImpl(color);
     }
 
     private void updateModernLocationBarCorners() {
@@ -568,6 +569,7 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
                         EventConstants.PARTNER_HOME_PAGE_BUTTON_PRESSED);
             }
         }
+        BraveToolbarLayout.class.cast(this).onClickImpl(v);
     }
 
     @Override
@@ -1019,6 +1021,7 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
      * New Tab Page.
      */
     private void updateLocationBarLayoutForExpansionAnimation() {
+        if (!BraveToolbarLayout.class.cast(this).isLocationBarValid(mLocationBar)) return;
         TraceEvent.begin("ToolbarPhone.updateLocationBarLayoutForExpansionAnimation");
         if (isInTabSwitcherMode()) return;
 
@@ -1358,6 +1361,7 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
             canvas.restore();
         }
 
+        BraveToolbarLayout.class.cast(this).drawAnimationOverlay(mToolbarButtonsContainer, canvas);
         // Draw the tab stack button and associated text if necessary.
         if (mTabSwitcherAnimationTabStackDrawable != null && mToggleTabStackButton != null
                 && mUrlExpansionFraction != 1f) {
@@ -2111,6 +2115,7 @@ public class ToolbarPhone extends ToolbarLayout implements OnClickListener, TabC
         } else {
             populateUrlClearExpansionAnimatorSet(animators);
         }
+        if (!BraveToolbarLayout.class.cast(this).isLocationBarValid(mLocationBar)) return;
         mUrlFocusLayoutAnimator = new AnimatorSet();
         mUrlFocusLayoutAnimator.playTogether(animators);
 

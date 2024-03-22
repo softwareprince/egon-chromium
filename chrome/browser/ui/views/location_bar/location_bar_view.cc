@@ -754,6 +754,7 @@ void LocationBarView::Layout() {
     }
   };
 
+  BRAVE_LAYOUT_TRAILING_DECORATIONS
   add_trailing_decoration(page_action_icon_container_,
                           /*intra_item_padding=*/0);
   for (ContentSettingImageView* view : base::Reversed(content_setting_views_)) {

@@ -344,7 +344,7 @@ void ShowSlow(Browser* browser) {
 #endif
 }
 
-GURL GetSettingsUrl(const std::string& sub_page) {
+BRAVE_GET_SETTINGS_URL
   return GURL(std::string(kChromeUISettingsURL) + sub_page);
 }
 

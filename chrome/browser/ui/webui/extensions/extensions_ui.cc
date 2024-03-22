@@ -433,6 +433,7 @@ content::WebUIDataSource* CreateAndAddExtensionsSource(Profile* profile,
       "safetyCheckShowReviewPanel",
       base::FeatureList::IsEnabled(features::kSafetyCheckExtensions));
 
+  BRAVE_CREATE_EXTENSIONS_SOURCE
   return source;
 }
 

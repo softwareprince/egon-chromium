@@ -170,7 +170,7 @@ std::unique_ptr<KeyedService> SyncServiceFactory::BuildServiceInstanceFor(
   init_params.debug_identifier = browser_state->GetDebugName();
 
   auto sync_service =
-      std::make_unique<syncer::SyncServiceImpl>(std::move(init_params));
+      BRAVE_BUILD_SERVICE_INSTANCE_FOR
   sync_service->Initialize();
 
   // TODO(crbug.com/1400663): Remove the workaround below once

@@ -46,12 +46,12 @@ constexpr base::TimeDelta kUpdatePositionInterval = base::Milliseconds(100);
 const char kMprisAPINoTrackPath[] = "/org/mpris/MediaPlayer2/TrackList/NoTrack";
 
 const char kMprisAPICurrentTrackPathFormatString[] =
-    "/org/chromium/MediaPlayer2/TrackList/Track%s";
+    "/com/brave/MediaPlayer2/TrackList/Track%s";
 
 }  // namespace
 
 const char kMprisAPIServiceNameFormatString[] =
-    "org.mpris.MediaPlayer2.chromium.instance%i";
+    "org.mpris.MediaPlayer2.brave.instance%i";
 const char kMprisAPIObjectPath[] = "/org/mpris/MediaPlayer2";
 const char kMprisAPIInterfaceName[] = "org.mpris.MediaPlayer2";
 const char kMprisAPIPlayerInterfaceName[] = "org.mpris.MediaPlayer2.Player";

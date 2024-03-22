@@ -82,6 +82,7 @@ class AvatarToolbarButton : public ToolbarButton {
   static void SetIPHMinDelayAfterCreationForTesting(base::TimeDelta delay);
 
  private:
+  BRAVE_AVATAR_BUTTON_H
   FRIEND_TEST_ALL_PREFIXES(AvatarToolbarButtonTest,
                            HighlightMeetsMinimumContrast);
 

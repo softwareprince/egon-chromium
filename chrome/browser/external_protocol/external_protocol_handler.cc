@@ -371,7 +371,7 @@ ExternalProtocolHandler::BlockState ExternalProtocolHandler::GetBlockState(
     if (candidate == scheme) {
       base::UmaHistogramEnumeration(kBlockStateMetric,
                                     BlockStateMetric::kAllowedDefaultMail);
-      return DONT_BLOCK;
+      return UNKNOWN;
     }
   }
   for (const auto* candidate : kNewsSchemes) {

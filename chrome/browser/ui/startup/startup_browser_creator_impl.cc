@@ -396,6 +396,7 @@ StartupBrowserCreatorImpl::DetermineURLsAndLaunch(
   welcome_enabled =
       welcome::IsEnabled(profile_) && welcome::HasModulesToShow(profile_);
 #endif  // BUILDFLAG(ENABLE_DICE_SUPPORT)
+  BRAVE_STARTUPBROWSERCREATORIMPL_DETERMINEURLSANDLAUNCH
 
   const bool whats_new_enabled =
       whats_new::ShouldShowForState(local_state, promotional_tabs_enabled);

@@ -13453,6 +13453,7 @@ function initAnimation(animationData, initParams, canvas) {
     },
   });
 
+  currentAnimation.addEventListener("complete", () => postMessage({ name: 'complete' }));
   sendInitializedEvent();
 
   // Play the animation if its not already playing.

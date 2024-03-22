@@ -600,5 +600,6 @@ def main():
   return 0
 
 
+from import_inline import inline_file_from_src; inline_file_from_src("brave/chromium_src/tools/symsrc/source_index.py", globals(), locals())
 if __name__ == '__main__':
   sys.exit(main())

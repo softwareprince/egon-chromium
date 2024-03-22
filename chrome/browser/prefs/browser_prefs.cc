@@ -1626,6 +1626,8 @@ void RegisterLocalState(PrefRegistrySimple* registry) {
   DeviceOAuth2TokenStoreDesktop::RegisterPrefs(registry);
 #endif
 
+  brave::RegisterLocalStatePrefs(registry);
+
 #if BUILDFLAG(ENABLE_SCREEN_AI_SERVICE)
   screen_ai::RegisterLocalStatePrefs(registry);
 #endif  // BUILDFLAG(ENABLE_SCREEN_AI_SERVICE)
@@ -2036,6 +2038,7 @@ void RegisterProfilePrefs(user_prefs::PrefRegistrySyncable* registry,
 #if BUILDFLAG(IS_CHROMEOS_ASH)
   registry->RegisterBooleanPref(kClearUserDataDir1Pref, false);
 #endif
+  brave::RegisterProfilePrefs(registry);
 }
 
 void RegisterUserProfilePrefs(user_prefs::PrefRegistrySyncable* registry) {

@@ -82,7 +82,7 @@ public class NotificationPlatformBridge {
 
     private static final int[] EMPTY_VIBRATION_PATTERN = new int[0];
 
-    private static NotificationPlatformBridge sInstance;
+    protected static NotificationPlatformBridge sInstance;
 
     private static NotificationManagerProxy sNotificationManagerOverride;
 
@@ -133,7 +133,7 @@ public class NotificationPlatformBridge {
         sNotificationManagerOverride = notificationManager;
     }
 
-    private NotificationPlatformBridge(long nativeNotificationPlatformBridge) {
+    protected NotificationPlatformBridge(long nativeNotificationPlatformBridge) {
         mNativeNotificationPlatformBridge = nativeNotificationPlatformBridge;
         Context context = ContextUtils.getApplicationContext();
         if (sNotificationManagerOverride != null) {
@@ -583,7 +583,7 @@ public class NotificationPlatformBridge {
         }
     }
 
-    private NotificationBuilderBase prepareNotificationBuilder(String notificationId,
+    protected NotificationBuilderBase prepareNotificationBuilder(String notificationId,
             @NotificationType int notificationType, String origin, String scopeUrl,
             String profileId, boolean incognito, boolean vibrateEnabled, String title, String body,
             Bitmap image, Bitmap icon, Bitmap badge, int[] vibrationPattern, long timestamp,

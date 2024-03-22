@@ -8,6 +8,7 @@ import {loadTimeData} from 'chrome://resources/js/load_time_data.js';
 import {pageVisibility} from './page_visibility.js';
 import {Route, Router, SettingsRoutes} from './router.js';
 
+import addBraveRoutes from './brave_routes.js'
 /**
  * Add all of the child routes that originate from the privacy route,
  * regardless of whether the privacy section under basic or advanced.
@@ -278,6 +279,7 @@ function createBrowserSettingsRoutes(): SettingsRoutes {
     }
     // </if>
   }
+  addBraveRoutes(r);
   return r as unknown as SettingsRoutes;
 }
 

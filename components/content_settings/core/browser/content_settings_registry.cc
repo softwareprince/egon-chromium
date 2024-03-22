@@ -609,6 +609,7 @@ void ContentSettingsRegistry::Init() {
            WebsiteSettingsRegistry::ALL_PLATFORMS,
            ContentSettingsInfo::INHERIT_IN_INCOGNITO,
            ContentSettingsInfo::EXCEPTIONS_ON_SECURE_AND_INSECURE_ORIGINS);
+  BRAVE_INIT
 }
 
 void ContentSettingsRegistry::Register(

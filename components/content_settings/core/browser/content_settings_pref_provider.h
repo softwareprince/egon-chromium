@@ -78,6 +78,7 @@ class PrefProvider : public UserModifiableProvider {
   ContentSettingsPref* GetPref(ContentSettingsType type) const;
 
  private:
+  friend class BravePrefProvider;
   friend class DeadlockCheckerObserver;  // For testing.
 
   void Notify(const ContentSettingsPattern& primary_pattern,

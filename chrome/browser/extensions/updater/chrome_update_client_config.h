@@ -85,6 +85,7 @@ class ChromeUpdateClientConfig : public update_client::Configurator {
   absl::optional<bool> IsMachineExternallyManaged() const override;
   update_client::UpdaterStateProvider GetUpdaterStateProvider() const override;
   absl::optional<base::FilePath> GetCrxCachePath() const override;
+  BRAVE_CHROME_UPDATE_CLIENT_CONFIG_H_
 
  protected:
   friend class base::RefCountedThreadSafe<ChromeUpdateClientConfig>;

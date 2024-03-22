@@ -17,6 +17,7 @@ static_library("renderer") {
     "//media:media_buildflags",
     "//third_party/widevine/cdm:buildflags",
   ]
+  import("//brave/components/cdm/renderer/sources.gni") deps += brave_components_cdm_renderer_deps
 
   if (enable_library_cdms || is_win || is_android) {
     sources += [

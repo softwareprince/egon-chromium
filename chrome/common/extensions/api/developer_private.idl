@@ -241,6 +241,7 @@ namespace developerPrivate {
     DOMString iconUrl;
     DOMString id;
     AccessModifier incognitoAccess;
+    boolean isSplitMode;
     DOMString[] installWarnings;
     DOMString? launchUrl;
     Location location;

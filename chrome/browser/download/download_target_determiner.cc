@@ -1256,6 +1256,7 @@ DownloadFileType::DangerLevel DownloadTargetDeterminer::GetDangerLevel(
   // contains malware.
   if (HasPromptedForPath() ||
       confirmation_reason_ != DownloadConfirmationReason::NONE ||
+      BRAVE_DOWNLOAD_TARGET_DETERMINER_GET_DANGER_LEVEL
       !download_->GetForcedFilePath().empty())
     return DownloadFileType::NOT_DANGEROUS;
 
@@ -1294,6 +1295,7 @@ DownloadFileType::DangerLevel DownloadTargetDeterminer::GetDangerLevel(
         ui::PAGE_TRANSITION_FROM_ADDRESS_BAR) != 0 ||
        (download_->HasUserGesture() && visits == VISITED_REFERRER)))
     return DownloadFileType::NOT_DANGEROUS;
+  BRAVE_DOWNLOAD_TARGET_DETERMINER_GET_DANGER_LEVEL2
   return danger_level;
 }
 

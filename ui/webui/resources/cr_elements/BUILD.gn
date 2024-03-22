@@ -63,6 +63,7 @@ build_webui("build") {
       web_component_files +=
           [ "cr_searchable_drop_down/cr_searchable_drop_down.ts" ]
     }
+    else if (!is_android) { web_component_files += [ "cr_searchable_drop_down/cr_searchable_drop_down.ts" ] }
 
     icons_html_files = [
       "cr_fingerprint/cr_fingerprint_icons.html",

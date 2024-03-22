@@ -347,6 +347,7 @@ class TypedURLSyncBridgeTest : public testing::Test {
     typed_url_sync_bridge_->Init();
     typed_url_sync_bridge_->history_backend_observation_.Reset();
     fake_history_backend_->SetTypedURLSyncBridgeForTest(std::move(bridge));
+    BRAVE_TEST_MEMBERS_INIT
   }
 
   void TearDown() override { fake_history_backend_->Closing(); }
@@ -554,6 +555,7 @@ class TypedURLSyncBridgeTest : public testing::Test {
   scoped_refptr<TestHistoryBackendForSync> fake_history_backend_;
   raw_ptr<TypedURLSyncBridge> typed_url_sync_bridge_ = nullptr;
   NiceMock<MockModelTypeChangeProcessor> mock_processor_;
+  BRAVE_TEST_MEMBERS_DECLARE
 };
 
 // Add two typed urls locally and verify bridge can get them from GetAllData.

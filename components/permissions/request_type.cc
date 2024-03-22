@@ -397,6 +397,7 @@ const char* PermissionKeyForRequestType(permissions::RequestType request_type) {
         return "window_placement";
       }
 #endif
+    BRAVE_PERMISSION_KEY_FOR_REQUEST_TYPE
   }
 
   return nullptr;

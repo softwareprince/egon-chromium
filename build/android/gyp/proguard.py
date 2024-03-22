@@ -329,6 +329,7 @@ def _OptimizeWithR8(options, config_paths, libraries, dynamic_config_data):
         '--pg-map-output',
         tmp_mapping_path,
     ]
+    cmd.remove('--map-id-template'); cmd.remove(f'{options.source_file} ({options.package_name})') # required to omit package check for mapping file
 
     if options.disable_checks:
       cmd += ['--map-diagnostics:CheckDiscardDiagnostic', 'error', 'none']

@@ -666,6 +666,7 @@ void VideoOverlayWindowViews::UpdateMaxSize(const gfx::Rect& work_area) {
 
   max_size_ = new_max_size;
 
+  BRAVE_UPDATE_MAX_SIZE
   if (!native_widget())
     return;
 

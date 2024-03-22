@@ -335,6 +335,7 @@ void DefaultProvider::DiscardOrMigrateObsoletePreferences() {
   prefs_->ClearPref(kObsoletePpapiBrokerDefaultPref);
 #endif  // !BUILDFLAG(IS_ANDROID)
 #endif  // !BUILDFLAG(IS_IOS)
+BRAVE_DISCARD_OR_MIGRATE_OBSOLETE_PREFERENCES
 }
 
 void DefaultProvider::RecordHistogramMetrics() {

@@ -122,6 +122,7 @@ RequestTypeForUma GetUmaValueForRequestType(RequestType request_type) {
 #endif
     case RequestType::kTopLevelStorageAccess:
       return RequestTypeForUma::PERMISSION_TOP_LEVEL_STORAGE_ACCESS;
+    BRAVE_GET_UMA_VALUE_FOR_REQUEST_TYPE
   }
 }
 

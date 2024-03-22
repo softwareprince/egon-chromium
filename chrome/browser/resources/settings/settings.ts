@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import './brave_overrides/index.js';
 import './settings_ui/settings_ui.js';
 
 export {ControlledRadioButtonElement} from '/shared/settings/controls/controlled_radio_button.js';

@@ -199,6 +199,7 @@ def _GetAbisToDigitMask(build_number, patch_number):
     mapped to version code suffix.
   """
   # Scheme change was made directly to M113 and M114 branches.
+  from brave_version_utils import remap_build_number; build_number = remap_build_number(build_number)
   use_new_scheme = (build_number >= 5750
                     or (build_number == 5672 and patch_number >= 176)
                     or (build_number == 5735 and patch_number >= 53))
@@ -332,7 +333,7 @@ def GenerateVersionCodes(version_values, arch, is_next_build):
 
   build_number = int(version_values['BUILD'])
   patch_number = int(version_values['PATCH'])
-  base_version_code = (build_number * 1000 + patch_number) * 100
+  base_version_code = int('%02d%02d%03d00' % (int(version_values['MINOR']) + 41, int(version_values['BUILD']), int(version_values['PATCH'])))
 
   if is_next_build:
     base_version_code += _NEXT_BUILD_VERSION_CODE_DIFF

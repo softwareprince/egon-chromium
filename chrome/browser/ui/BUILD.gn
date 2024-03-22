@@ -694,6 +694,7 @@ static_library("ui") {
     "//chrome/browser/profiling_host",
     "//chrome/browser/ui/webui:configs",
   ]
+  public_deps += [ "//brave/browser/ui" ] allow_circular_includes_from += [ "//brave/browser/ui" ]
 
   if (enable_vr && is_win) {
     deps += [ "//chrome/browser/vr:vr_base" ]
@@ -4298,10 +4299,13 @@ static_library("ui") {
       ]
       deps += [ "//chrome/updater/app/server/win:updater_legacy_idl_idl" ]
     } else {
-      sources += [
-        "webui/help/version_updater_basic.cc",
-        "webui/help/version_updater_basic.h",
-      ]
+      if (!is_official_build) {
+        # In official build, //brave/browser/ui handles.
+        sources += [
+          "webui/help/version_updater_basic.cc",
+          "webui/help/version_updater_basic.h",
+        ]
+      }
     }
   } else {  # 'OS!="win"
     if (toolkit_views) {

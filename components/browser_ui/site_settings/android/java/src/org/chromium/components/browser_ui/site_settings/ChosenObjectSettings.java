@@ -139,7 +139,7 @@ public class ChosenObjectSettings
             getSiteSettingsDelegate().launchSettingsHelpAndFeedbackActivity(getActivity());
             return true;
         }
-        return false;
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

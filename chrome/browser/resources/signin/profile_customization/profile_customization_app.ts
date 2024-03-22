@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'chrome://resources/brave/polymer_overriding.js';
 import 'chrome://resources/cr_components/customize_themes/customize_themes.js';
 import 'chrome://resources/cr_components/theme_color_picker/theme_color_picker.js';
 import 'chrome://resources/cr_elements/cr_button/cr_button.js';

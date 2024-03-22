@@ -184,6 +184,7 @@ bool CanTrackLastVisit(ContentSettingsType type) {
   // a valid "initial default" value.
   if (type == ContentSettingsType::PROTOCOL_HANDLERS)
     return false;
+  BRAVE_CAN_TRACK_LAST_VISIT
 
   auto* info =
       content_settings::ContentSettingsRegistry::GetInstance()->Get(type);

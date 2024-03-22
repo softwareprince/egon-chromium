@@ -42,6 +42,7 @@ class NativeExtensionBindingsSystem {
   NativeExtensionBindingsSystem& operator=(
       const NativeExtensionBindingsSystem&) = delete;
 
+  virtual
   ~NativeExtensionBindingsSystem();
 
   // Called when a new ScriptContext is created.

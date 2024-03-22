@@ -188,6 +188,7 @@ SyncerError Syncer::BuildAndPostCommits(const ModelTypeSet& request_types,
     }
     nudge_tracker->RecordSuccessfulCommitMessage(
         commit->GetContributingDataTypes());
+    BRAVE_SYNCER_BUILD_AND_POST_COMMITS_POLLER_CHECK
   }
 
   return SyncerError(SyncerError::SYNCER_OK);

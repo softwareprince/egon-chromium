@@ -4396,6 +4396,7 @@ if (is_android) {
       "android/java/src/org/chromium/base/task/ThreadPoolTaskExecutor.java",
       "android/java/src/org/chromium/base/task/UiThreadTaskExecutor.java",
     ]
+    sources += brave_java_base_sources
 
     if (!is_cronet_build) {
       sources += [ "android/java/src/org/chromium/base/IntentUtils.java" ]

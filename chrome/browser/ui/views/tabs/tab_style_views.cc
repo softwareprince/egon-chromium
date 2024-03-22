@@ -135,6 +135,7 @@ class GM2TabStyleViews : public TabStyleViews {
   TabStyle::TabSelectionState GetSelectionState() const;
 
  private:
+  BRAVE_GM2_TAB_STYLE_H
   // Gets the bounds for the leading and trailing separators for a tab.
   TabStyle::SeparatorBounds GetSeparatorBounds(float scale) const;
 
@@ -289,6 +290,7 @@ SkPath GM2TabStyleViews::GetPath(TabStyle::PathType path_type,
   const ShapeModifier shape_modifier = GetShapeModifier(path_type);
   const bool extend_left_to_bottom = shape_modifier & kNoLowerLeftArc;
   const bool extend_right_to_bottom = shape_modifier & kNoLowerRightArc;
+  extension_corner_radius = 0;
 
   SkPath path;
 
@@ -606,9 +608,10 @@ TabStyle::SeparatorBounds GM2TabStyleViews::GetSeparatorBounds(
   TabStyle::SeparatorBounds separator_bounds;
 
   const int extra_vertical_space =
+      2 * (
       aligned_bounds.height() -
       (separator_size.height() + separator_margin.bottom() +
-       separator_margin.top());
+       separator_margin.top()));
 
   separator_bounds.leading = gfx::RectF(
       aligned_bounds.x() + corner_radius - separator_margin.right() -
@@ -1023,14 +1026,18 @@ void GM2TabStyleViews::PaintSeparators(gfx::Canvas* canvas) const {
                                                    SK_AlphaOPAQUE));
   };
 
+  // Even if |separator_radius| becomes 1 native pixel the 'roundedness'
+  // will be approximated with color, although extremely subtle and
+  // likely only on screens >= 2x (i.e. separator width is 2+px)!
+  const int separator_radius =  separator_bounds.leading.width() / 2;
   cc::PaintFlags flags;
   flags.setAntiAlias(true);
   flags.setColor(separator_color(separator_opacities.left));
   canvas->DrawRoundRect(separator_bounds.leading,
-                        tab_style()->GetSeparatorCornerRadius() * scale, flags);
+                        separator_radius, flags);
   flags.setColor(separator_color(separator_opacities.right));
   canvas->DrawRoundRect(separator_bounds.trailing,
-                        tab_style()->GetSeparatorCornerRadius() * scale, flags);
+                        separator_radius, flags);
 }
 
 float GM2TabStyleViews::GetTopCornerRadiusForWidth(int width) const {

@@ -253,6 +253,7 @@ CookieSettingsBase::GetCookieSettingInternal(
       ShouldBlockThirdPartyCookies() &&
       !IsThirdPartyCookiesAllowedScheme(first_party_url.scheme());
 
+  BRAVE_COOKIE_SETTINGS_BASE_GET_COOKIES_SETTINGS_INTERNAL
   if (IsAllowed(setting) && !block_third) {
     FireStorageAccessHistogram(
         net::cookie_util::StorageAccessResult::ACCESS_ALLOWED);

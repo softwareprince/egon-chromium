@@ -638,6 +638,7 @@ def _ParseOptions():
            'with the installer archive {x86|x64}.')
   parser.add_option('-v', '--verbose', action='store_true', dest='verbose',
                     default=False)
+  parser.add_option('--skip_signing', action='store_true', default=False)
 
   options, _ = parser.parse_args()
   if not options.build_dir:
@@ -666,6 +667,7 @@ def _ParseOptions():
 
   return options
 
+from import_inline import inline_file_from_src; inline_file_from_src("brave/chromium_src/chrome/tools/build/win/create_installer_archive.py", globals(), locals())
 
 if '__main__' == __name__:
   options = _ParseOptions()

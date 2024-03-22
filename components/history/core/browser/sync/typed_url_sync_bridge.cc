@@ -386,6 +386,7 @@ void TypedURLSyncBridge::OnURLVisited(HistoryBackend* history_backend,
   if (!change_processor()->IsTrackingMetadata()) {
     return;  // Sync processor not yet ready, don't sync.
   }
+  BRAVE_TYPED_URL_SYNC_BRIDGE_ON_URL_VISITED_REPLACE_SHOULD_SYNC_VISIT
   if (!ShouldSyncVisit(url_row.typed_count(), visit_row.transition)) {
     return;
   }

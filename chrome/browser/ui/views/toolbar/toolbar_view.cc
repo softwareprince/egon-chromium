@@ -461,6 +461,7 @@ void ToolbarView::Init() {
         container_view_->AddChildView(std::move(side_panel_button));
   }
 
+  BRAVE_TOOLBAR_VIEW_INIT
   avatar_ = container_view_->AddChildView(
       std::make_unique<AvatarToolbarButton>(browser_view_));
   bool show_avatar_toolbar_button = true;

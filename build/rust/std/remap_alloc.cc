@@ -129,7 +129,15 @@ REMAP_ALLOC_ATTRIBUTES void* __rust_alloc(size_t size, size_t align) {
 }
 
 REMAP_ALLOC_ATTRIBUTES void __rust_dealloc(void* p, size_t size, size_t align) {
+#if defined(COMPILER_MSVC)
+  if (align <= alignof(std::max_align_t)) {
+    free(p);
+  } else {
+    _aligned_free(p);
+  }
+#else
   free(p);
+#endif
 }
 
 REMAP_ALLOC_ATTRIBUTES void* __rust_realloc(void* p,

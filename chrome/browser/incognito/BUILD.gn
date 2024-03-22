@@ -63,6 +63,7 @@ android_library("java") {
     "//url:gurl_java",
   ]
 
+  sources += brave_private_tab_reauth_java_sources deps += brave_private_tab_reauth_java_deps
   resources_package = "org.chromium.chrome.browser.incognito"
 }
 

@@ -938,5 +938,6 @@ def main():
         '+/main/docs/android_studio.md')
 
 
+from import_inline import inline_file_from_src; inline_file_from_src("brave/chromium_src/build/android/gradle/generate_gradle.py", globals(), locals())
 if __name__ == '__main__':
   main()

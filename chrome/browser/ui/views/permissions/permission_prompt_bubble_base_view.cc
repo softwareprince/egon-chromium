@@ -190,6 +190,7 @@ PermissionPromptBubbleBaseView::PermissionPromptBubbleBaseView(
   }
 
   SetProperty(views::kElementIdentifierKey, kMainViewId);
+  BRAVE_PERMISSION_PROMPT_BUBBLE_BASE_VIEW
 }
 
 PermissionPromptBubbleBaseView::~PermissionPromptBubbleBaseView() = default;
