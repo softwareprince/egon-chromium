@@ -3,48 +3,48 @@
 <translationbundle lang="lt">
 <translation id="130631256467250065">Pakeitimai įsigalios kitą kartą iš naujo paleidus įrenginį.</translation>
 <translation id="1555506416658437797">redaguoti mokėjimo metodus</translation>
-<translation id="275588974610408078">„Chromium“ negalima teikti strigčių ataskaitų.</translation>
-<translation id="3064346599913645280">Peržiūrite saugų „Chromium“ puslapį</translation>
-<translation id="3255926992597692024">„Chromium“ bando keisti mokėjimo metodų pildymo nustatymus.</translation>
-<translation id="358997566136285270">„Chromium“ logotipas</translation>
-<translation id="4050599136622776556">„Chromium“ bando redaguoti mokėjimo metodus.</translation>
-<translation id="4365115785552740256">„Chromium“ pasiekiama naudojant <ph name="BEGIN_LINK_CHROMIUM" />„Chromium“<ph name="END_LINK_CHROMIUM" /> atvirojo šaltinio projektą ir kitą <ph name="BEGIN_LINK_OSS" />atvirojo šaltinio programinę įrangą<ph name="END_LINK_OSS" />.</translation>
-<translation id="4559775032954821361">Eikite į 
-          „Chromium“ meniu &gt;
-          „<ph name="SETTINGS_TITLE" />“
+<translation id="7999989146447764333">„Brave“ negalima teikti strigčių ataskaitų.</translation>
+<translation id="1953231710324290369">Peržiūrite saugų „Brave“ puslapį</translation>
+<translation id="907470742420136113">„Brave“ bando keisti mokėjimo metodų pildymo nustatymus.</translation>
+<translation id="4847979153841887006">„Brave“ logotipas</translation>
+<translation id="336808635693308470">„Brave“ bando redaguoti mokėjimo metodus.</translation>
+<translation id="7932149101545999102">„Brave“ pasiekiama naudojant <ph name="BEGIN_LINK_CHROMIUM"/>„Brave“<ph name="END_LINK_CHROMIUM"/> atvirojo šaltinio projektą ir kitą <ph name="BEGIN_LINK_OSS"/>atvirojo šaltinio programinę įrangą<ph name="END_LINK_OSS"/>.</translation>
+<translation id="8746410156982274638">Eikite į 
+          „Brave“ meniu &gt;
+          „<ph name="SETTINGS_TITLE"/>“
           &gt;
-          „<ph name="ADVANCED_TITLE" />“
+          „<ph name="ADVANCED_TITLE"/>“
           &gt;
-          „<ph name="PROXIES_TITLE" />“
+          „<ph name="PROXIES_TITLE"/>“
           &gt;
           „LAN nustatymai“
           ir panaikinkite žymimojo laukelio „LAN naudoti tarpinį serverį“ pasirinkimą.</translation>
-<translation id="4622039161600275920">Šį puslapį užblokavo „Chromium“</translation>
-<translation id="48558539577516920">Leiskite „Chromium“ pasiekti tinklą užkardos arba antivirusinės programos
+<translation id="303960458633076466">Šį puslapį užblokavo „Brave“</translation>
+<translation id="2017237562285586622">Leiskite „Brave“ pasiekti tinklą užkardos arba antivirusinės programos
           nustatymuose.</translation>
-<translation id="580822234363523061">Eikite į
-          „Chromium“ meniu &gt;
-          „<ph name="SETTINGS_TITLE" />“
+<translation id="8619622797841001082">Eikite į
+          „Brave“ meniu &gt;
+          „<ph name="SETTINGS_TITLE"/>“
           &gt;
-          „<ph name="ADVANCED_TITLE" />“
+          „<ph name="ADVANCED_TITLE"/>“
           &gt;
-          „<ph name="PROXIES_TITLE" />“ 
+          „<ph name="PROXIES_TITLE"/>“ 
           ir nustatykite konfigūraciją kaip „Nėra tarpinio serverio“ arba „Tiesioginis“.</translation>
 <translation id="585620188971323280">keisti mokėjimo metodų pildymo nustatymus.</translation>
-<translation id="6549378540556750549">„Chromium“ taip pat pasiekiama naudojant kitą <ph name="BEGIN_LINK_OSS" />atvirojo šaltinio programinę įrangą<ph name="END_LINK_OSS" />.</translation>
-<translation id="6613594504749178791">Pakeitimai įsigalios kitą kartą iš naujo paleidus „Chromium“.</translation>
-<translation id="7681937895330411637">„Chromium“ pasiekiama naudojant <ph name="BEGIN_LINK_CHROMIUM" />„Chromium“<ph name="END_LINK_CHROMIUM" /> atvirojo šaltinio projektą.</translation>
-<translation id="7861509383340276692">Eikite į
-        „Chromium“ meniu &gt;
-        „<ph name="SETTINGS_TITLE" />“
+<translation id="2765022094254723779">„Brave“ taip pat pasiekiama naudojant kitą <ph name="BEGIN_LINK_OSS"/>atvirojo šaltinio programinę įrangą<ph name="END_LINK_OSS"/>.</translation>
+<translation id="9156965752763025780">Pakeitimai įsigalios kitą kartą iš naujo paleidus „Brave“.</translation>
+<translation id="6477625882876869143">„Brave“ pasiekiama naudojant <ph name="BEGIN_LINK_CHROMIUM"/>„Brave“<ph name="END_LINK_CHROMIUM"/> atvirojo šaltinio projektą.</translation>
+<translation id="4068928808254189629">Eikite į
+        „Brave“ meniu &gt;
+        „<ph name="SETTINGS_TITLE"/>“
         &gt;
-        „<ph name="ADVANCED_TITLE" />“
-        ir panaikinkite „<ph name="NO_PREFETCH_DESCRIPTION" />“ pasirinkimą.
+        „<ph name="ADVANCED_TITLE"/>“
+        ir panaikinkite „<ph name="NO_PREFETCH_DESCRIPTION"/>“ pasirinkimą.
         Jei tai atlikus problema išlieka, rekomenduojame vėl pasirinkti šią parinktį,
         kad pagerėtų našumas.</translation>
 <translation id="8187289872471304532">Eikite į
           „Programos“ &gt; „Sistemos nuostatos“ &gt; „Tinklas“ &gt; „Išplėstinis“ &gt; „Tarpiniai serveriai“
           ir panaikinkite visų tarpinių serverių pasirinkimą.</translation>
-<translation id="8597726643333341451">Peržiūrite saugų „Chrome for Testing“ puslapį</translation>
-<translation id="8684913864886094367">„Chromium“ netinkamai išsijungė.</translation>
+<translation id="4159376633403260073">Peržiūrite saugų „Brave for Testing“ puslapį</translation>
+<translation id="88187049159266777">„Brave“ netinkamai išsijungė.</translation>
 </translationbundle>
