@@ -629,19 +629,20 @@ class Generator(generator.Generator):
               import_module_is_shared == this_module_is_shared
 
       if use_relative_path:
-        import_path = urllib.request.pathname2url(
-            os.path.relpath(
-                strip_prefix(strip_prefix(import_path, _CHROME_SCHEME_PREFIX),
-                             _SHARED_MODULE_PREFIX),
-                strip_prefix(
-                    strip_prefix(this_module_path, _CHROME_SCHEME_PREFIX),
-                    _SHARED_MODULE_PREFIX)))
-        if (not import_path.startswith('.')
-            and not import_path.startswith('/')):
-          import_path = './' + import_path
+            try:
+                import_path = urllib.request.pathname2url(
+                    os.path.relpath(
+                        strip_prefix(strip_prefix(import_path, _CHROME_SCHEME_PREFIX), _SHARED_MODULE_PREFIX),
+                        strip_prefix(strip_prefix(this_module_path, _CHROME_SCHEME_PREFIX), _SHARED_MODULE_PREFIX)
+                    )
+                )
+                if not import_path.startswith('.') and not import_path.startswith('/'):
+                    import_path = './' + import_path
+            except ValueError:
+                # Fallback to absolute path if relative path computation fails
+                import_path = import_path
       else:
-        # Import absolute imports from scheme-relative paths.
-        import_path = strip_prefix(import_path, _CHROME_SCHEME_PREFIX)
+            import_path = strip_prefix(import_path, _CHROME_SCHEME_PREFIX)
 
       if import_path not in imports:
         imports[import_path] = []

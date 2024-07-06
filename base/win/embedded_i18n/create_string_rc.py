@@ -65,6 +65,7 @@ import glob
 import io
 import os
 import sys
+import logging
 from xml import sax
 
 BASEDIR = os.path.dirname(os.path.abspath(__file__))
@@ -278,15 +279,23 @@ class StringRcMaker(object):
                                                       other.language)
 
   def __AddModeSpecificStringIds(self):
-    """Adds the mode-specific strings for all of the current brand's install
-    modes to self.string_id_set."""
-    for string_id, brands in self.mode_specific_strings.items():
-      brand_strings = brands.get(self.brand)
-      if not brand_strings:
-        raise RuntimeError(
-            'No strings declared for brand \'%s\' in MODE_SPECIFIC_STRINGS for '
-            'message %s' % (self.brand, string_id))
-      self.string_id_set.update(brand_strings)
+        """Adds the mode-specific strings for all of the current brand's install
+        modes to self.string_id_set."""
+        # Log all available brands
+        available_brands = {brand for brands in self.mode_specific_strings.values() for brand in brands}
+        logging.warning(f"Available brands: {available_brands}")
+        for string_id, brands in self.mode_specific_strings.items():
+            brand_strings = brands.get(self.brand)
+            if not brand_strings:
+                # Fallback to 'brave' brand if 'Egon' brand is not available
+                if self.brand == 'Egon':
+                    logging.warning(f"No strings declared for brand '{self.brand}' in MODE_SPECIFIC_STRINGS for message {string_id}. Falling back to 'brave' brand.")
+                    brand_strings = brands.get('brave')
+                if not brand_strings:
+                    raise RuntimeError(
+                        'No strings declared for brand \'%s\' in MODE_SPECIFIC_STRINGS for '
+                        'message %s' % (self.brand, string_id))
+            self.string_id_set.update(brand_strings)
 
   def __ReadSourceAndTranslatedStrings(self):
     """Reads the source strings and translations from all inputs."""
@@ -473,9 +482,15 @@ Extra input files:
       # Populate the DO_MODE_STRINGS macro.
       brand_strings = brands.get(self.brand)
       if not brand_strings:
-        raise RuntimeError(
-            'No strings declared for brand \'%s\' in MODE_SPECIFIC_STRINGS for '
-            'message %s' % (self.brand, string_id))
+                # Fallback to 'brave' brand if 'Egon' brand is not available
+                if self.brand == 'Egon':
+                    logging.warning(f"No strings declared for brand '{self.brand}' in MODE_SPECIFIC_STRINGS for message {string_id}. Falling back to 'brave' brand.")
+                    brand_strings = brands.get('brave')
+                if not brand_strings:
+                    raise RuntimeError(
+                        'No strings declared for brand \'%s\' in MODE_SPECIFIC_STRINGS for '
+                        'message %s' % (self.brand, string_id))
+      self.string_id_set.update(brand_strings)
       do_mode_strings_lines.append(
         '  HANDLE_MODE_STRING(%s_BASE, %s)'
         % (string_id, ', '.join([ ('%s_BASE' % s) for s in brand_strings])))
